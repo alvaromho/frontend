@@ -2,7 +2,7 @@
 <html>
     <head>
       <meta charset="utf-8">
-      <title>Vista Salas</title>
+      <title>Menu</title>
 
       <!-- Sets initial viewport load and disables zooming  -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
@@ -12,83 +12,33 @@
       <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
       <!-- Include the compiled Ratchet CSS -->
-      <link href="css/ratchet.css" rel="stylesheet">
-      <script src="js/ratchet.js"></script>
+      <link href="css/ratchet.min.css" rel="stylesheet">
     </head>
 
-    <body id="main-wrapper" >
-      <!-- Make sure all your bars are the first things in your <body> -->
-      <header class="bar bar-nav">
-        <a class="icon icon-left-nav pull-left" data-bind="visible: isCreateAndEditVisible, click: showList"></a>
-         <a class="icon icon-compose pull-right" href="#popover"data-bind="visible: isListVisible"></a> 
-        <h1 class="title">Mostrar Salas <a class="icon icon-share" href="#popover"></a></h1>
-      </header>
+    <body>
 
-      <div class="content">
+        <header class="bar bar-nav">
+            <h1 class="title">Menu </h1>
+        </header>
 
-        <div id="crudSalass">
-          <!-- List -->
-          <div data-bind="visible: isListVisible">
-            <p class="content-padded">Lista Salas:</p>
+        <div class="content">
+            <div class="card">
 
-            <div data-bind="foreach: salaList" class="card">
-              <ul class="table-view">
-                <li class="table-view-cell">
-                  <a class="navigate-right" data-bind="click: $parent.showEdit" >
-                    <span data-bind="text: nom"></span>
-                  </a>
-                </li>
-              </ul>
+                <button class="btn btn-positive btn-block" onclick= "window.location.href='sala.html'">Sala</button>
+                <br>
+                <button class="btn btn-positive btn-block" onclick= "window.location.href='bano.html'">Ba&ntilde;os</button>
+                <br>
+                <button class="btn btn-positive btn-block" onclick= "window.location.href='impresora.html'">Impresoras</button>
+                <br>
+                <button class="btn btn-positive btn-block" onclick= "window.location.href='lab.html'">Laboratorios</button>
+                <br>
             </div>
-          </div>
+        </div>
 
-          <!-- New and Edit -->
-          <div data-bind="visible: isCreateAndEditVisible">
-            <p class="content-padded">Salas:</p>
-            <form class="content-padded">
-              <input type="text" placeholder="Nombre" data-bind="value: nom">
-              <input type="text" placeholder="Edificio" data-bind="value: edif">
-              <button class="btn btn-positive btn-block">Guardar</button>
-              <button class="btn btn-negative btn-block" data-bind="visible: isDeleteVisible">Eliminar</button>
-            </form>
-          </div>
-        </div> <!-- Crud Salass -->
-      
-<!-- Pop over -->
-<!--         <div id="popover" class="popover" data-bind= "visible: isPopVisible">
-            <header class="bar bar-nav">
-              <h1 class="title">Mapa</h1>
-            </header>
-            <ul class="table-view">
-              <li class="table-view-cell"><img class="media-object center" src="pop-back.jpg"></li>
-            </ul>
-        </div> -->
-
-            <div id="popover" class="popover">
-      <header class="bar bar-nav">
-        <h1 class="title">Share this</h1>
-      </header>
-      <ul class="table-view">
-        <li class="table-view-cell">Facebook</li>
-        <li class="table-view-cell">WhatsApp</li>
-        <li class="table-view-cell">Google+</li>
-        <li class="table-view-cell">Tweet</li>
-        <li class="table-view-cell">Pinterest</li>
-        <li class="table-view-cell">Reddit</li>
-        <li class="table-view-cell">Pocket</li>
-        <li class="table-view-cell">Email</li>
-      </ul>
-    </div>
-
-      </div>
-   
-      <script src="cordova.js" type="text/javascript"></script>
-      <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-      <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
-      <script type="text/javascript" src="js/salaViewModel.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
+        <script src="cordova.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
+        <script type="text/javascript" src="js/salaViewModel.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
-
-
-
