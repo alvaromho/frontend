@@ -17,8 +17,9 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         var vm = new SalaViewModel();
+        vm.showList();
         ko.applyBindings(vm, $('#main-wrapper')[0]);
-        
+
     },
 
     // Update DOM on a Received Event
@@ -35,3 +36,6 @@ var app = {
 };
 
 app.initialize(); 
+
+
+
