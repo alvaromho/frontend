@@ -5,7 +5,7 @@ var SalaViewModel = function(){
   var self = this;
 
   //Domain data
-  self.name = ko.observable('Manzana');
+  self.name = ko.observable('');
   self.price = ko.observable();
   self.salaList = ko.observableArray();
 
@@ -58,7 +58,7 @@ var SalaViewModel = function(){
   };
 
   self.getAll = function(){
-    var url = 'http://padrinounab.herokuapp.com/api/get';
+    var url = 'http://backendfinal.herokuapp.com/api/room';
 
     $.ajax({
 
