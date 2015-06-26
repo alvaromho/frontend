@@ -16,7 +16,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        var vm = new SalaViewModel();
+        var vm = new roomViewModel();
         vm.showList();
         ko.applyBindings(vm, $('#main-wrapper')[0]);
 

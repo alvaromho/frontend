@@ -1,13 +1,13 @@
 'use strict';
 
-var SalaViewModel = function(){
+var printerViewModel = function(){
 
   var self = this;
 
   //Domain data
   self.name = ko.observable('Manzana');
   self.price = ko.observable();
-  self.salaList = ko.observableArray();
+  self.printerList = ko.observableArray();
 
   //Behaviour
   self.isEditMode = ko.observable(false);
@@ -68,7 +68,7 @@ var SalaViewModel = function(){
         contentType: 'application/json; charset=utf-8',
         success: function(data){
             console.log(data);
-            self.salaList(data);
+            self.printerList(data);
         },
         error: function(xhr, type){
             console.error(xhr);
