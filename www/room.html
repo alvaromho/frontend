@@ -2,7 +2,7 @@
 <html>
     <head>
       <meta charset="utf-8">
-      <title>Vista Salas</title>
+      <title>Buscar Salas</title>
 
       <!-- Sets initial viewport load and disables zooming  -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
@@ -18,31 +18,15 @@
     <body id="main-wrapper" >
       <!-- Make sure all your bars are the first things in your <body> -->
       <header class="bar bar-nav">
-        <h1 class="title">Mostrar Salas </h1>
+        <h1 class="title">Buscar Salas </h1>
       </header>
 
       <div class="content">
 
         <div id="crudroom">
-          <!-- List -->
-          <div>
-            <p class="content-padded">Lista Salas:</p>
-
-            <div data-bind="foreach: roomList" class="card">
-              
-              <ul class="table-view">
-                <li class="table-view-cell">
-                <!-- Cambiar aqui la accion para que envia al map -->
-                  <a class="navigate-right" onclick= "window.location.href='map.html'"> 
-                    <span data-bind="text: nom"></span>
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-          </div><!-- List-->
-          <select name="Elegir Edificio">
-              <option value="R1" selected="selected">R1</option>
+          <p>Eligir Edificio</p>
+          <select name="Edificio">
+              <option value="R1">R1</option>
               <option value="R2">R2</option>
               <option value="R3">R3</option>
               <option value="R5">R5</option>
@@ -51,7 +35,8 @@
               <option value="R8">R8</option>
               <option value="R10">R10</option>
           </select>
-          <select name="Elegir Piso">
+          <p>Elegir Piso</p>
+          <select name="Piso">
               <option value="P1">1</option>
               <option value="P2">2</option>
               <option value="P3">3</option>

@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
       <meta charset="utf-8">
-      <title>Vista Impresoras</title>
+      <title>Buscar Impresoras</title>
 
       <!-- Sets initial viewport load and disables zooming  -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
@@ -29,25 +29,9 @@ and open the template in the editor.
       <div class="content">
 
         <div id="crudprinter">
-          <!-- List -->
-          <div>
-            <p class="content-padded">Lista Impresoras:</p>
-
-            <div data-bind="foreach: printerList" class="card">
-              
-              <ul class="table-view">
-                <li class="table-view-cell">
-                <!-- Cambiar aqui la accion para que envia al map -->
-                  <a class="navigate-right" onclick= "window.location.href='map.html'"> 
-                    <span data-bind="text: nom"></span>
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-          </div><!-- List-->
-          <select name="Elegir Edificio">
-              <option value="R1" selected="selected">R1</option>
+          <p>Eligir Edificio</p>
+          <select name="Edificio">
+              <option value="R1">R1</option>
               <option value="R2">R2</option>
               <option value="R3">R3</option>
               <option value="R5">R5</option>
@@ -56,6 +40,7 @@ and open the template in the editor.
               <option value="R8">R8</option>
               <option value="R10">R10</option>
           </select>
+          <p>Elegir Piso</p>
           <select name="Elegir Piso">
               <option value="P1">1</option>
               <option value="P2">2</option>
