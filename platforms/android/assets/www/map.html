@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
       <meta charset="utf-8">
-      <title>Vista Laboratorios</title>
+      <title>Mapa</title>
 
       <!-- Sets initial viewport load and disables zooming  -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, target-densitydpi=medium-dpi, user-scalable=0" />
 
       <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
       <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,30 +19,17 @@ and open the template in the editor.
     <body id="main-wrapper" >
       <!-- Make sure all your bars are the first things in your <body> -->
       <header class="bar bar-nav">
-        <h1 class="title">Mostrar Laboratorios </h1>
+        <a class="icon icon-left-nav pull-left" onclick= "window.location.href='room.html'"></a>
+
       </header>
 
       <div class="content">
 
-        <div id="crudlab">
-          <!-- List -->
-          <div>
-            <p class="content-padded">Lista Laboratorios:</p>
-
-            <div data-bind="foreach: labList" class="card">
-              
-              <ul class="table-view">
-                <li class="table-view-cell">
-                <!-- Cambiar aqui la accion para que envia al map -->
-                  <a class="navigate-right" onclick= "window.location.href='map.html'"> 
-                    <span data-bind="text: nom"></span>
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-          </div><!-- List-->
-        </div> <!-- Crud lab -->
+       <!-- <img src="/img/logo.png"> -->
+      
+      <img src="http://i.imgur.com/lYrkqLJ.png" title="source: imgur.com" />
+     <!-- <img src="http://imgur.com/gallery/1KB7Qps/new" title="source: imgur.com" />-->
+  
       </div>
    
       <script src="cordova.js" type="text/javascript"></script>
@@ -55,5 +37,9 @@ and open the template in the editor.
       <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
       <script type="text/javascript" src="js/salaViewModel.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript" src="js/functions.js"></script>
     </body>
 </html>
+
+
+
